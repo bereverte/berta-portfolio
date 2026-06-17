@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react"
+import { useState, useEffect, useRef } from "react"
+import { ArrowRight, Download, ChevronDown } from "lucide-react"
 
 function GitHubIcon({ size = 20 }) {
   return (
@@ -17,6 +18,17 @@ function LinkedInIcon({ size = 20 }) {
 }
 
 export default function Hero() {
+  const [cvOpen, setCvOpen] = useState(false)
+  const cvRef = useRef(null)
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (cvRef.current && !cvRef.current.contains(e.target)) setCvOpen(false)
+    }
+    if (cvOpen) document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [cvOpen])
+
   return (
     <section id="hero" aria-label="Introduction">
       <div className="hero__content">
@@ -41,6 +53,44 @@ export default function Hero() {
           <a href="#contact" className="btn btn-outline">
             Get in touch
           </a>
+          <div className="cv-dropdown" ref={cvRef}>
+            <button
+              className="btn btn-outline cv-dropdown__trigger"
+              onClick={() => setCvOpen(o => !o)}
+              aria-expanded={cvOpen}
+              aria-haspopup="true"
+            >
+              <Download size={15} aria-hidden="true" />
+              Download CV
+              <ChevronDown
+                size={14}
+                aria-hidden="true"
+                className={`cv-dropdown__chevron${cvOpen ? " cv-dropdown__chevron--open" : ""}`}
+              />
+            </button>
+            {cvOpen && (
+              <div className="cv-dropdown__menu" role="menu">
+                <a
+                  href="/Developer_CV__EN_.pdf"
+                  download
+                  className="cv-dropdown__item"
+                  role="menuitem"
+                  onClick={() => setCvOpen(false)}
+                >
+                  English
+                </a>
+                <a
+                  href="/Developer_CV__ES_.pdf"
+                  download
+                  className="cv-dropdown__item"
+                  role="menuitem"
+                  onClick={() => setCvOpen(false)}
+                >
+                  Español
+                </a>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="hero__social" aria-label="Social links">

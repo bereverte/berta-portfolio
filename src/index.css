@@ -132,6 +132,47 @@ body {
   transform: translateY(-1px);
 }
 
+/* ── CV Dropdown ── */
+.cv-dropdown {
+  position: relative;
+}
+
+.cv-dropdown__chevron {
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+
+.cv-dropdown__chevron--open {
+  transform: rotate(180deg);
+}
+
+.cv-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  min-width: 130px;
+  z-index: 10;
+}
+
+.cv-dropdown__item {
+  display: block;
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: background var(--transition), color var(--transition);
+}
+
+.cv-dropdown__item:hover {
+  background: var(--bg);
+  color: var(--accent);
+}
+
 /* ── Navbar ── */
 .navbar {
   position: fixed;

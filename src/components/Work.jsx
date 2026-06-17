@@ -12,7 +12,7 @@ const projects = [
   {
     title: 'Konnekte',
     description:
-      'A social platform to discover and connect with people who share your interests and professional goals.',
+      'A platform connecting homeowners with vetted construction and renovation professionals. Service listings, personalized guidance, and end-to-end support from first idea to finished project.',
     tech: ['React', 'TypeScript', 'Tailwind', 'Vercel'],
     live: 'https://konnekte-web.vercel.app/',
     image: '/images/konnekte.png',
@@ -20,7 +20,7 @@ const projects = [
   {
     title: 'Crumz Can Cakes',
     description:
-      'A beautifully designed site for an artisan bakery. Browse custom cakes, explore flavours, and get in touch with the baker.',
+      'Animated landing page for a cakes-in-a-can brand. Handcrafted pastries with bold flavors, born from European pastry roots and baked fresh in Cairo.',
     tech: ['React', 'JavaScript', 'Tailwind', 'Vercel'],
     live: 'https://crumzcancakes.vercel.app/',
     image: '/images/crumz.png',
