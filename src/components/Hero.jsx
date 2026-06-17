@@ -71,7 +71,7 @@ export default function Hero() {
             {cvOpen && (
               <div className="cv-dropdown__menu" role="menu">
                 <a
-                  href="/Developer_CV__EN_.pdf"
+                  href="/Berta_Reverte_CV_EN.pdf"
                   download
                   className="cv-dropdown__item"
                   role="menuitem"
@@ -80,7 +80,7 @@ export default function Hero() {
                   English
                 </a>
                 <a
-                  href="/Developer_CV__ES_.pdf"
+                  href="/Berta_Reverte_CV_ES.pdf"
                   download
                   className="cv-dropdown__item"
                   role="menuitem"
