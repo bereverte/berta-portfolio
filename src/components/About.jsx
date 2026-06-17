@@ -22,7 +22,7 @@ export default function About() {
 
           <div className="about__bio">
             <p className="section-label">About</p>
-            <h2 className="about__bio-name">Hi, I'm Berta.</h2>
+            <h2 className="about__bio-name">Hi, I'm Berta:)</h2>
             <p>
               I'm a frontend developer with a passion for building digital experiences that are both
               visually polished and technically sound. I enjoy working at the intersection of design

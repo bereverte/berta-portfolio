@@ -1,15 +1,42 @@
 /* ── Reset ── */
-*, *::before, *::after { box-sizing: border-box; }
-body, h1, h2, h3, h4, p, ul, li { margin: 0; padding: 0; }
-ul { list-style: none; }
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
-button { cursor: pointer; border: none; background: none; font: inherit; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
 
 /* ── Variables ── */
 :root {
   --bg: #f8f9fa;
-  --accent: #D4537E;
+  --accent: #d4537e;
   --accent-hover: #b83d68;
   --text: #212529;
   --text-muted: #6c757d;
@@ -30,7 +57,12 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 1rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -107,7 +139,9 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-  transition: background var(--transition), box-shadow var(--transition);
+  transition:
+    background var(--transition),
+    box-shadow var(--transition);
 }
 
 .navbar--scrolled {
@@ -130,7 +164,7 @@ body {
 .navbar__logo {
   font-weight: 700;
   font-size: 1.05rem;
-  color: var(--text);
+  color: var(--accent);
   letter-spacing: -0.03em;
 }
 
@@ -266,7 +300,9 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
   display: flex;
   flex-direction: column;
 }
