@@ -231,7 +231,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 6rem 1.5rem 5rem;
+  padding: 6rem 0 5rem;
   scroll-margin-top: 0;
 }
 
@@ -239,6 +239,7 @@ body {
   max-width: var(--max-w);
   margin: 0 auto;
   width: 100%;
+  padding: 0 1.5rem;
 }
 
 .hero__badge {
@@ -322,7 +323,7 @@ body {
 
 /* ── Work ── */
 #work {
-  padding: 6rem 1.5rem;
+  padding: 6rem 0;
   scroll-margin-top: 64px;
 }
 
@@ -468,7 +469,7 @@ body {
 
 /* ── About ── */
 #about {
-  padding: 6rem 1.5rem;
+  padding: 6rem 0;
   background: var(--white);
   scroll-margin-top: 64px;
 }
@@ -559,7 +560,7 @@ body {
 
 /* ── Contact ── */
 #contact {
-  padding: 7rem 1.5rem;
+  padding: 7rem 0;
   text-align: center;
   scroll-margin-top: 64px;
 }
